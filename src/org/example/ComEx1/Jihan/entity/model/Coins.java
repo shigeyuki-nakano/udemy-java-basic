@@ -1,4 +1,4 @@
-package ComEx1.Jihan.entity.model;
+package org.example.ComEx1.Jihan.entity.model;
 
 public enum Coins {
     ItiYen(1),
