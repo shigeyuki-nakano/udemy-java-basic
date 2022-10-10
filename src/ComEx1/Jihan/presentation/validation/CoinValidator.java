@@ -1,6 +1,6 @@
-package org.example.ComEx1.Jihan.presentation.validation;
+package ComEx1.Jihan.presentation.validation;
 
-import org.example.ComEx1.Jihan.entity.model.Coins;
+import ComEx1.Jihan.entity.model.Coins;
 
 import java.util.Arrays;
 import java.util.List;
