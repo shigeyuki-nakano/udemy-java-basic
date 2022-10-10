@@ -53,7 +53,7 @@ public class Main {
                 var coin = Coins.getByInt(i);
 
                 if(coin == null) {
-                    System.out.println(i + "は硬貨として適切な値ではありません");
+                    System.out.println("警告：" + i + "は硬貨として適切な値ではありません");
                     return null;
                 }
                 if(CoinValidator.isAvailable(coin)) {
