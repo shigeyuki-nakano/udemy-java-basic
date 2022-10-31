@@ -3,6 +3,7 @@ package ComEx2.attendance_calculation.service;
 import ComEx2.attendance_calculation.entity.WorkingTime;
 
 import java.sql.Time;
+import java.util.List;
 
 public class CalcSalaryService {
     private static final int HOURLY_WAGES = 900;
@@ -20,6 +21,13 @@ public class CalcSalaryService {
         final var workingTime = calcWorkingTimeService.getWorkingTime(startTime, endTime);
 
         return calcWages(workingTime);
+    }
+
+    public int getWages(List<Time[]> times) {
+        return times.stream()
+                .map((t) -> getDailyWages(t[0], t[1]))
+                .mapToInt(i -> i)
+                .sum();
     }
 
     private int calcOvertimeWages(WorkingTime workingTime) {
